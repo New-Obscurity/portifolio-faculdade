@@ -8,7 +8,7 @@
 <body>
 
 	<!--Abas da pagina-->
-	<div id="yabe">
+	<div>
 		<nav>
 			<ul>
 				<li><a class="active" href="index.html">Início</a></li>
@@ -22,26 +22,26 @@
 
 
 	<!--Parte de envio dos dados -->
-	<div class="container">
+	<div class="container-1">
+
 		<h2 id="h-contato">Contato</h2>
-		<form class="contact" >
+		
+		<form class="contact">
 
-			<input class="field "type="text" id="nome" name="nome" placeholder="Insert your name or company" required><br> <!--falta: validação de informação / anti-spam-->
+			<input class="field" type="text" id="nome" name="nome" placeholder="Insert your name or company" autocomplete="name" required><br> <!--falta: validação de informação / anti-spam-->
 
-			<input class="field" type="email" id="email" name="email" placeholder="Insert Email" required><br> <!--nenhum problema encontrado-->
+			<input class="field" type="email" id="email" name="email" placeholder="Insert Email" autocomplete="email" required><br> <!--nenhum problema encontrado-->
 
-			<textarea class="field" id="mensagem" name="mensagem" rows="5" placeholder="What you want" required></textarea><br><br> <!--estilizar melhor-->
+				<textarea class="field" id="mensagem" name="mensagem" rows="5" placeholder="What you want" required></textarea><br><br> <!--estilizar melhor-->
 
 			<button class="btn" type="submit">Enviar</button>
 			<!--arrumar para tornar o envio funcional e ativo-->
 		</form>
 	</div>
 
-
 	<!--Pé da página-->
 	<div>
 		<footer>
-			<p>Em desenvolvimento</p>
 			<p>Em desenvolvimento</p>
 		</footer>
 	</div>

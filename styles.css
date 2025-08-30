@@ -1,7 +1,19 @@
-body{
+body {
 	font-family: "Courier New", Courier, Monospace; /*Fontes das páginas*/
 }
 
+.page-box {
+	max-width: 900px;         /* largura máxima no desktop */
+	margin: 40px auto;        /* centraliza no meio da tela */
+	padding: 20px;            /* espaço interno */
+	background-color: #f9f9f9;/* fundo da caixa */
+	border: 1px solid #ddd;   /* borda fina */
+	border-radius: 12px;      /* cantos arredondados */
+	box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* sombra leve */
+}
+
+
+/*padronização dos paragrafos*/
 p {
 	margin-bottom: 1em; /*separação por linhas*/
 	line-height: 1.0; /*espaçamento entre elas*/
@@ -9,30 +21,33 @@ p {
 
 /* Caixa para o menu */
 nav {
-  background-color: #f9f9f9;   /* fundo cinza claro */
-  border: 1px solid #e0e0e0;   /* borda cinza suave */
-  border-radius: 6px;          /* cantos arredondados */
-  padding: 4px 8px;           /* espaço interno */
-  margin: 25px auto;           /* distância do topo */
-  width: fit-content;          /* caixa só do tamanho do conteúdo */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* sombra leve */
+	background-color: #f9f9f9;   /* fundo cinza claro */
+	border: 1px solid #e0e0e0;   /* borda cinza suave */
+	border-radius: 6px;          /* cantos arredondados */
+	padding: 4px 8px;           /* espaço interno */
+	margin: 25px auto;           /* distância do topo */
+	width: fit-content;          /* caixa só do tamanho do conteúdo */
+	box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* sombra leve */
 }
 
 nav a {
 	padding-left:12px; /*espaçamento da esquerda*/
 }
 
+
+/*========= Decoração do top-menu da página =========*/
+
 nav a:link {
 	text-decoration:none;
 }
 
-nav a:visited{
-	color:black;
+nav a:visited {
+	color:black; /*para links já visitados a cor permanecera preta*/
 	text-decoration:none;
 }
 
-nav a:hover{
-	text-decoration:underline;
+nav a:hover {
+	text-decoration:underline; /*decoração quando o mouse passar por cima*/
 }
 
 ul {
@@ -42,6 +57,7 @@ ul {
 	overflow: hidden;
 	background-color: white;
 }
+
 
 li {
 	float: left;
@@ -63,6 +79,7 @@ li a:hover {
 	background-color: #f9f9f9;
 }
 
+/*
 input[type=text], select {
 	width: 35%;
 	padding: 12px 20px;
@@ -73,6 +90,7 @@ input[type=text], select {
 	box-sizing: border-box;
 }
 
+
 input[type=email], select {
 	width: 35%;
 	padding: 12px 20px;
@@ -82,41 +100,46 @@ input[type=email], select {
 	border-radius: 12px;
 	box-sizing: border-box;
 }
+*/
+
 
 input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+	background-color: #45a049;
 }
 
 footer {
 	background-color: #777;
-	padding: 10px;
+	padding: 7px;
 	text-align: left;
 	color: white;
 }
 
 .contact{
-	display: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	gap: 12px;
 }
 
 .field {
-	width:35%;
+	width: 35%;
 	padding: 8px 12px;
 	border: 2px solid #6b7280;
 	border-radius: 14px;
 	background: #fff;
 	color: #0f172a;
+	box-sizing: border-box;
 }
 
 .field::placeholder {
@@ -124,13 +147,13 @@ footer {
 }
 
 textarea.field {
-	width: 31%; /*Tamanho da caixa de mensagem em largura*/
+	width: 35%; /*Tamanho da caixa de mensagem em largura*/
 	min-height: 100px; /*tamanho da caixa de mensagem em altura*/
 	resize: none; /*retirando a opção de redimensionar a caixa de mensagem*/
 }
 
 
-.container {
+.container-1 {
 	text-align: center;
 	border-radius: 25px;
 	background-color: #0000;
@@ -142,10 +165,32 @@ textarea.field {
 }
 
 .btn {
-	background-color: #f1f1f1;
+	border-color: black;
+	background-color: white;
+	color: black;
+	padding: 12px 18px;
+	border: 2px solid black;
+	border-radius: 30px;
+	cursor: pointer
+}
+
+.btn:hover {
+	border: 2px solid gray;
+	background-color: black;
+	color: white;
 }
 
 #h-contato {
 	text-align: center;
 	font-weight: bold;
 }
+
+
+/*Acessibilidade*/
+.field:focus,
+.btn:focus {
+  outline: 3px solid #93c5fd; /* azul claro */
+  outline-offset: 2px;
+}
+
+
