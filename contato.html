@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Contato</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Contato</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<!--bloco da página-->
+		<div class="page-box">
 
-	<!--Abas da pagina-->
-	<div>
-		<nav>
-			<ul>
-				<li><a class="active" href="index.html">Início</a></li>
-				<li><a href="sobre.html">Sobre mim</a></li>
-				<li><a href="formacao.html">Formação</a></li>
-				<li><a href="projetos.html">Projetos</a></li>
-				<li><a href="contato.html">Contato</a></li>
-			</ul>
-		</nav>
-	</div>
+			<!--Abas da página-->
+			<div>
+				<nav>
+					<ul>
+						<li><a class="active" href="index.html">Início</a></li>
+						<li><a href="sobre.html">Sobre mim</a></li>
+						<li><a href="formacao.html">Formação</a></li>
+						<li><a href="projetos.html">Projetos</a></li>
+						<li><a href="contato.html">Contato</a></li>
+					</ul>
+				</nav>
+			</div>
 
+			<!--Parte de envio dos dados -->
+			<div class="container-1">
+				<h2 id="h-contato">Contato</h2>
+				<form class="contact">
 
-	<!--Parte de envio dos dados -->
-	<div class="container-1">
+					<!--falta acessibilidades-->
+					<input class="field" type="text" id="nome" name="nome" placeholder="Insert your name or company" autocomplete="name" required><br> <!--falta: validação de informação / anti-spam-->
+					<input class="field" type="email" id="email" name="email" placeholder="Insert Email" autocomplete="email" required><br> <!--nenhum problema encontrado-->
+					<textarea class="field" id="mensagem" name="mensagem" rows="5" placeholder="What you want" required></textarea><br><br> <!--estilizar melhor-->
+					<button class="btn" type="submit">Enviar</button><!--arrumar para tornar o envio funcional e ativo-->
+				</form>
+			</div>
 
-		<h2 id="h-contato">Contato</h2>
+			<!--Pé da página-->
+			<div>
+				<footer>
+					<p>Em desenvolvimento</p>
+				</footer>
+			</div>
+
 		
-		<form class="contact">
-
-			<input class="field" type="text" id="nome" name="nome" placeholder="Insert your name or company" autocomplete="name" required><br> <!--falta: validação de informação / anti-spam-->
-
-			<input class="field" type="email" id="email" name="email" placeholder="Insert Email" autocomplete="email" required><br> <!--nenhum problema encontrado-->
-
-				<textarea class="field" id="mensagem" name="mensagem" rows="5" placeholder="What you want" required></textarea><br><br> <!--estilizar melhor-->
-
-			<button class="btn" type="submit">Enviar</button>
-			<!--arrumar para tornar o envio funcional e ativo-->
-		</form>
-	</div>
-
-	<!--Pé da página-->
-	<div>
-		<footer>
-			<p>Em desenvolvimento</p>
-		</footer>
-	</div>
-
-</body>
+		</div>
+	</body>
 </html>
 

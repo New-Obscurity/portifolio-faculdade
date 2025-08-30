@@ -1,12 +1,14 @@
 body {
 	font-family: "Courier New", Courier, Monospace; /*Fontes das páginas*/
+	background-color: #f9f9f9;
 }
 
+/* é o box que mantem toda a pagina*/
 .page-box {
-	max-width: 900px;         /* largura máxima no desktop */
-	margin: 40px auto;        /* centraliza no meio da tela */
+	max-width: (80vw, 900px);         /* definido para 80% a proporção maxima dele*/
+	margin: 20px auto;        /* centraliza no meio da tela */
 	padding: 20px;            /* espaço interno */
-	background-color: #f9f9f9;/* fundo da caixa */
+	background-color: white;/* fundo da caixa */
 	border: 1px solid #ddd;   /* borda fina */
 	border-radius: 12px;      /* cantos arredondados */
 	box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* sombra leve */
@@ -78,30 +80,6 @@ li a.active {
 li a:hover {
 	background-color: #f9f9f9;
 }
-
-/*
-input[type=text], select {
-	width: 35%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 12px;
-	box-sizing: border-box;
-}
-
-
-input[type=email], select {
-	width: 35%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 12px;
-	box-sizing: border-box;
-}
-*/
-
 
 input[type=submit] {
 	width: 100%;
@@ -193,4 +171,18 @@ textarea.field {
   outline-offset: 2px;
 }
 
+/*citação que aparece no inicio*/
+.carta-texto {
+	width: min(90vw 700px);
+	margin: 32px auto;
+	padding: 24px;
+	background: #ffffff;
+	border: 1px solid #e5e7eb;
+	border-radius: 14px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
+#citacao {
+	font-family: Garamond, serif;
+	font-weight: bold;
+}
