@@ -13,11 +13,10 @@
 			<div>
 				<nav>
 					<ul>
-						<li><a class="active" href="index.html">Início</a></li>
-						<li><a href="sobre.html">Sobre mim</a></li>
+						<li><a href="index.html">Início</a></li>
 						<li><a href="formacao.html">Formação</a></li>
 						<li><a href="projetos.html">Projetos</a></li>
-						<li><a href="contato.html">Contato</a></li>
+						<li><a class="active" href="contato.html">Contato</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -26,17 +25,19 @@
 			<div class="container-1">
 				<h2 id="h-contato">Contato</h2>
 				<form class="contact">
+					<label for="nome">Nome</label><br>
+					<input class="field" type="text" id="nome" name="nome" placeholder="Seu nome ou empresa" autocomplete="name" required><br> <!--falta: validação de informação / anti-spam-->
 
-					<!--falta acessibilidades-->
-					<input class="field" type="text" id="nome" name="nome" placeholder="Insert your name or company" autocomplete="name" required><br> <!--falta: validação de informação / anti-spam-->
-					<input class="field" type="email" id="email" name="email" placeholder="Insert Email" autocomplete="email" required><br> <!--nenhum problema encontrado-->
-					<textarea class="field" id="mensagem" name="mensagem" rows="5" placeholder="What you want" required></textarea><br><br> <!--estilizar melhor-->
+					<label for="email">Email</label><br>
+					<input class="field" type="email" id="email" name="email" placeholder="Email" autocomplete="email" required><br> <!--nenhum problema encontrado-->
+					<label for="mensagem">Mensagem</label><br>
+					<textarea class="field" id="mensagem" name="mensagem" rows="5" placeholder="Do que precisa?" required></textarea><br><br> <!--estilizar melhor-->
 					<button class="btn" type="submit">Enviar</button><!--arrumar para tornar o envio funcional e ativo-->
 				</form>
 			</div>
 
 			<!--Pé da página-->
-			<div>
+			<div class="f-page">
 				<footer>
 					<p>Em desenvolvimento</p>
 				</footer>

@@ -5,18 +5,17 @@ body {
 
 /* é o box que mantem toda a pagina*/
 .page-box {
-	max-width: (80vw, 900px);         /* definido para 80% a proporção maxima dele*/
 	margin: 20px auto;        /* centraliza no meio da tela */
 	padding: 20px;            /* espaço interno */
 	background-color: white;/* fundo da caixa */
 	border: 1px solid #ddd;   /* borda fina */
-	border-radius: 12px;      /* cantos arredondados */
+	border-radius: 14px;      /* cantos arredondados */
 	box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* sombra leve */
 }
 
 
 /*padronização dos paragrafos*/
-p {
+.f-page {
 	margin-bottom: 1em; /*separação por linhas*/
 	line-height: 1.0; /*espaçamento entre elas*/
 }
@@ -25,9 +24,9 @@ p {
 nav {
 	background-color: #f9f9f9;   /* fundo cinza claro */
 	border: 1px solid #e0e0e0;   /* borda cinza suave */
-	border-radius: 6px;          /* cantos arredondados */
+	border-radius: 14px;          /* cantos arredondados */
 	padding: 4px 8px;           /* espaço interno */
-	margin: 25px auto;           /* distância do topo */
+	margin: 14px auto;           /* distância do topo */
 	width: fit-content;          /* caixa só do tamanho do conteúdo */
 	box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* sombra leve */
 }
@@ -81,28 +80,15 @@ li a:hover {
 	background-color: #f9f9f9;
 }
 
-input[type=submit] {
-	width: 100%;
-	background-color: #4CAF50;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	border-radius: 12px;
-	cursor: pointer;
-}
-
-input[type=submit]:hover {
-	background-color: #45a049;
-}
 
 footer {
 	background-color: #777;
-	padding: 7px;
+	padding: 14px 16px;
 	text-align: left;
 	color: white;
+	margin: 12px auto;
 }
-
+		
 .contact{
 	display: flex;
 	flex-direction: column;
@@ -110,36 +96,29 @@ footer {
 	gap: 12px;
 }
 
-.field {
-	width: 35%;
+.field::placeholder {
+	color: #6b7280;
+}
+
+.field,
+textarea.field {
+	width: 100%;/* ocupa todo o espaço disponível */
+	max-width: 300px;/* mas não passa disso em telas grandes */
+	min-width: 250px;/* garante mínimo em telas pequenas */
 	padding: 8px 12px;
 	border: 2px solid #6b7280;
 	border-radius: 14px;
 	background: #fff;
 	color: #0f172a;
 	box-sizing: border-box;
+	resize: none; /* retiro a opção de redimensionar */
 }
-
-.field::placeholder {
-	color: #6b7280;
-}
-
-textarea.field {
-	width: 35%; /*Tamanho da caixa de mensagem em largura*/
-	min-height: 100px; /*tamanho da caixa de mensagem em altura*/
-	resize: none; /*retirando a opção de redimensionar a caixa de mensagem*/
-}
-
 
 .container-1 {
 	text-align: center;
-	border-radius: 25px;
+	border-radius: 14px;
 	background-color: #0000;
 	padding: 20px;
-}
-
-.texte {
-	text-align: center;
 }
 
 .btn {
@@ -148,7 +127,7 @@ textarea.field {
 	color: black;
 	padding: 12px 18px;
 	border: 2px solid black;
-	border-radius: 30px;
+	border-radius: 14px;
 	cursor: pointer
 }
 
@@ -173,9 +152,8 @@ textarea.field {
 
 /*citação que aparece no inicio*/
 .carta-texto {
-	width: min(90vw 700px);
-	margin: 32px auto;
-	padding: 24px;
+	margin: 30px auto;
+	padding: 20px;
 	background: #ffffff;
 	border: 1px solid #e5e7eb;
 	border-radius: 14px;
