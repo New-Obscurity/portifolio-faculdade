@@ -3,7 +3,7 @@ body {
 	background-color: #f9f9f9;
 }
 
-/* é o box que mantem toda a pagina*/
+/*========== é o box que mantem toda a pagina ==========*/
 .page-box {
 	margin: 20px auto;        /* centraliza no meio da tela */
 	padding: 20px;            /* espaço interno */
@@ -14,13 +14,7 @@ body {
 }
 
 
-/*padronização dos paragrafos*/
-.f-page {
-	margin-bottom: 1em; /*separação por linhas*/
-	line-height: 1.0; /*espaçamento entre elas*/
-}
-
-/* Caixa para o menu */
+/*========== Caixa para o menu ==========*/
 nav {
 	background-color: #f9f9f9;   /* fundo cinza claro */
 	border: 1px solid #e0e0e0;   /* borda cinza suave */
@@ -36,7 +30,7 @@ nav a {
 }
 
 
-/*========= Decoração do top-menu da página =========*/
+/*======== Decoração do top-menu da página =========*/
 
 nav a:link {
 	text-decoration:none;
@@ -51,6 +45,8 @@ nav a:hover {
 	text-decoration:underline; /*decoração quando o mouse passar por cima*/
 }
 
+
+/*utilizando listas não enumeradas para criar o barra de abas do site*/
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -80,24 +76,27 @@ li a:hover {
 	background-color: #f9f9f9;
 }
 
-
+/*========== estilo do pé da página ==========*/
 footer {
 	background-color: #777;
 	padding: 14px 16px;
 	text-align: left;
 	color: white;
 	margin: 12px auto;
+
 }
-		
+
+.f-page {
+	margin-bottom: 1em; /*separação por linhas*/
+	line-height: 1.0; /*espaçamento entre elas*/
+}
+
+/*========== estilização da parte de envio das informações ==========*/		
 .contact{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 12px;
-}
-
-.field::placeholder {
-	color: #6b7280;
 }
 
 .field,
@@ -114,11 +113,8 @@ textarea.field {
 	resize: none; /* retiro a opção de redimensionar */
 }
 
-.container-1 {
-	text-align: center;
-	border-radius: 14px;
-	background-color: #0000;
-	padding: 20px;
+.field::placeholder {
+	color: #6b7280;
 }
 
 .btn {
@@ -131,6 +127,20 @@ textarea.field {
 	cursor: pointer
 }
 
+/*vibilidade*/
+.field:focus,
+.btn:focus {
+  outline: 3px solid #93c5fd; /* azul claro */
+  outline-offset: 2px;
+}
+
+.container-1 {
+	text-align: center;
+	border-radius: 14px;
+	background-color: #0000;
+	padding: 20px;
+}
+
 .btn:hover {
 	border: 2px solid gray;
 	background-color: black;
@@ -140,14 +150,6 @@ textarea.field {
 #h-contato {
 	text-align: center;
 	font-weight: bold;
-}
-
-
-/*Acessibilidade*/
-.field:focus,
-.btn:focus {
-  outline: 3px solid #93c5fd; /* azul claro */
-  outline-offset: 2px;
 }
 
 /*citação que aparece no inicio*/
